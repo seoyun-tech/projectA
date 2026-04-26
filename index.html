@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MUSINSA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Flash Sale Strip -->
+  <aside class="flash-strip" aria-label="플래시 세일 안내">
+    <div class="flash-strip__inner">
+      <span class="flash-strip__icon"><i class="fa-solid fa-bolt"></i></span>
+      <span class="flash-strip__text">오늘만 특가</span>
+      <span class="flash-strip__desc">한정 특가 · 자정 마감</span>
+    </div>
+    <div class="flash-strip__right">
+      <a href="#" class="flash-strip__cta">지금 보기</a>
+      <span class="flash-strip__timer" id="flashTimer">00:00:00</span>
+      <button type="button" class="flash-strip__close" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="index.html" class="nav__logo">MUSINSA</a>
+      <ul class="nav__menu">
+        <li class="nav__menu-item nav__menu-item--active" id="catMenuBtn" aria-expanded="false" aria-controls="catDropdown">카테고리 <i class="fa-solid fa-sort-down"></i></li>
+        <li class="nav__menu-item">스냅</li>
+        <li class="nav__menu-item">매거진</li>
+        <li class="nav__menu-item">매장</li>
+        <li class="nav__menu-item">브랜드</li>
+        <li class="nav__menu-item">더보기 <i class="fa-solid fa-sort-down"></i></li>
+      </ul>
+      <div class="nav__icons">
+        <div class="profile-dropdown" id="profileDropdown">
+          <button type="button" class="nav__icon-item nav__icon-item--desktop-only profile-dropdown__trigger" id="profileBtn" aria-label="마이페이지" aria-expanded="false">
+            <i class="fa-regular fa-user"></i><i class="fa-solid fa-sort-down"></i>
+          </button>
+          <div class="profile-dropdown__panel" id="profilePanel">
+            <a href="#" class="profile-dropdown__item"><i class="fa-regular fa-user"></i>마이페이지</a>
+            <a href="#" class="profile-dropdown__item"><i class="fa-solid fa-box"></i>주문·배송조회</a>
+            <a href="#" class="profile-dropdown__item"><i class="fa-regular fa-clock"></i>최근 본 상품</a>
+            <a href="#" class="profile-dropdown__item"><i class="fa-solid fa-tag"></i>쿠폰·포인트</a>
+            <div class="profile-dropdown__sep"></div>
+            <a href="#" class="profile-dropdown__item profile-dropdown__item--logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>로그아웃</a>
+          </div>
+        </div>
+        <button type="button" class="nav__icon-item nav__icon-item--desktop-only" aria-label="찜 목록"><i class="fa-regular fa-heart"></i></button>
+        <button type="button" class="nav__icon-item" aria-label="장바구니"><i class="fa-solid fa-cart-shopping"></i></button>
+        <button type="button" class="nav__icon-item nav__search-btn" aria-label="검색"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <button type="button" class="nav__hamburger" id="navHamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+      <!-- Category Dropdown -->
+      <div class="cat-dropdown" id="catDropdown" role="region" aria-label="카테고리 메뉴">
+        <div class="cat-dropdown__tabs" role="tablist">
+          <button type="button" class="cat-dropdown__tab cat-dropdown__tab--active" data-gender="men" role="tab">MEN</button>
+          <button type="button" class="cat-dropdown__tab" data-gender="women" role="tab" disabled>WOMEN</button>
+          <button type="button" class="cat-dropdown__tab" data-gender="kids" role="tab" disabled>KIDS</button>
+        </div>
+        <div class="cat-dropdown__grid" id="catDropdownGrid"></div>
+      </div>
+    </nav>
+    <div class="cat-backdrop" id="catBackdrop"></div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="사이트 메뉴">
+    <div class="nav-drawer__overlay" id="navDrawerOverlay"></div>
+    <div class="nav-drawer__panel">
+      <button type="button" class="nav-drawer__close" id="navDrawerClose" aria-label="메뉴 닫기"><i class="fa-solid fa-xmark"></i></button>
+      <div class="nav-drawer__profile">
+        <div class="nav-drawer__profile-info">
+          <i class="fa-solid fa-circle-user nav-drawer__profile-avatar"></i>
+          <div>
+            <p class="nav-drawer__profile-name">무신사 회원</p>
+            <p class="nav-drawer__profile-sub">마이페이지 바로가기 <i class="fa-solid fa-angle-right"></i></p>
+          </div>
+        </div>
+        <div class="nav-drawer__profile-links">
+          <a href="#" class="nav-drawer__profile-link"><i class="fa-solid fa-box"></i>주문·배송</a>
+          <a href="#" class="nav-drawer__profile-link"><i class="fa-solid fa-tag"></i>쿠폰·포인트</a>
+          <a href="#" class="nav-drawer__profile-link"><i class="fa-regular fa-clock"></i>최근 본 상품</a>
+        </div>
+      </div>
+      <nav aria-label="모바일 메뉴">
+        <a href="#" class="nav-drawer__item">카테고리</a>
+        <a href="#" class="nav-drawer__item">스냅</a>
+        <a href="#" class="nav-drawer__item">매거진</a>
+        <a href="#" class="nav-drawer__item">매장</a>
+        <a href="#" class="nav-drawer__item">브랜드</a>
+        <a href="#" class="nav-drawer__item">더보기</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Gender Tab Bar -->
+  <div class="hero__gender-tabs" role="tablist" aria-label="성별 선택">
+    <button type="button" class="hero__gender-tab hero__gender-tab--active" role="tab" aria-selected="true" data-gender="men">MEN</button>
+    <button type="button" class="hero__gender-tab" role="tab" aria-selected="false" data-gender="women" disabled>WOMEN</button>
+    <button type="button" class="hero__gender-tab" role="tab" aria-selected="false" data-gender="kids" disabled>KIDS</button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-label="메인 배너">
+    <div class="hero__slider"></div>
+    <div class="hero__pager" id="heroPager" role="group" aria-label="슬라이드 탐색"></div>
+    <button type="button" class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="이전 슬라이드"><i class="fa-solid fa-chevron-left"></i></button>
+    <button type="button" class="hero__arrow hero__arrow--next" id="heroNext" aria-label="다음 슬라이드"><i class="fa-solid fa-chevron-right"></i></button>
+  </section>
+
+  <!-- Onboarding Banner -->
+  <aside class="onboarding-banner" id="onboardingBanner" aria-label="취향 설정 안내">
+    <span>어떤 스타일이 나에요? 5초 취향 선택 →</span>
+    <button type="button" class="onboarding-banner__close" id="onboardingClose">닫기</button>
+  </aside>
+
+  <!-- Scroll Nav -->
+  <nav class="scroll-nav" aria-label="스타일 클러스터 탐색">
+    <ul class="scroll-nav__list"></ul>
+  </nav>
+
+  <main class="main-content">
+
+    <!-- 당신을 위한 픽 -->
+    <section class="section-block" aria-labelledby="pick-title">
+      <header class="section-block__header">
+        <div class="section-block__title-group">
+          <h2 class="section-block__title" id="pick-title">당신을 위한 픽</h2>
+          <p class="section-block__subtitle">최근 본 스타일과 비슷한, 당신이 좋아할 만한 픽</p>
+        </div>
+        <a href="#" class="section-block__more">추천 더보기 <i class="fa-solid fa-angle-right"></i></a>
+      </header>
+      <div data-render="products"></div>
+    </section>
+
+    <!-- 브랜드 스토리 -->
+    <section class="section-block" aria-labelledby="brand-story-title">
+      <header class="section-block__header">
+        <div class="section-block__title-group">
+          <h2 class="section-block__title" id="brand-story-title">브랜드 스토리</h2>
+          <p class="section-block__subtitle">추천 브랜드의 감도 높은 에디토리얼</p>
+        </div>
+        <a href="#" class="section-block__more">스토리 더보기 <i class="fa-solid fa-angle-right"></i></a>
+      </header>
+      <div id="brand-stories-content"></div>
+    </section>
+
+    <!-- 스트리트 스냅 -->
+    <section class="section-block" aria-labelledby="snaps-title">
+      <header class="section-block__header">
+        <div class="section-block__title-group">
+          <h2 class="section-block__title" id="snaps-title">스트리트 스냅</h2>
+          <p class="section-block__subtitle">거리에서 포착한 패션 모먼트</p>
+        </div>
+        <a href="#" class="section-block__more">스냅 더보기 <i class="fa-solid fa-angle-right"></i></a>
+      </header>
+      <div class="lookbook-snap-grid" id="snaps-content"></div>
+    </section>
+
+    <!-- 최신 상품 -->
+    <section class="section-block" aria-labelledby="latest-title">
+      <header class="section-block__header">
+        <div class="section-block__title-group">
+          <h2 class="section-block__title" id="latest-title">최신 상품</h2>
+        </div>
+        <a href="#" class="section-block__more">더보기 <i class="fa-solid fa-angle-right"></i></a>
+      </header>
+      <div data-render="latest-products"></div>
+    </section>
+
+    <!-- Editorial Break -->
+    <aside class="editorial-break" aria-label="취향 탐색 유도">
+      <p class="editorial-break__eyebrow">당신의 취향이 여기 있습니다</p>
+      <h2 class="editorial-break__title">스크롤하다 발견하는<br>나만의 스타일</h2>
+      <a href="#" class="editorial-break__cta">취향 찾아보기 <i class="fa-solid fa-arrow-right"></i></a>
+    </aside>
+
+    <!-- 지금 뜨는 키워드 -->
+    <section class="trending-keywords" aria-labelledby="keywords-title">
+      <h2 class="trending-keywords__title" id="keywords-title">지금 뜨는 키워드</h2>
+      <div class="trending-keywords__lists"></div>
+    </section>
+
+    <!-- 베스트 아이템 -->
+    <section class="section-block" aria-labelledby="rankings-title">
+      <header class="section-block__header">
+        <div class="section-block__title-group">
+          <h2 class="section-block__title" id="rankings-title">베스트 아이템</h2>
+        </div>
+        <a href="#" class="section-block__more">전체보기 <i class="fa-solid fa-angle-right"></i></a>
+      </header>
+      <div id="rankings-content"></div>
+    </section>
+
+    <!-- PRE ORDER -->
+    <section class="section-block section-block--cream" aria-labelledby="preorder-title">
+      <header class="section-block__header">
+        <div class="section-block__title-group">
+          <h2 class="section-block__title" id="preorder-title">PRE ORDER</h2>
+        </div>
+        <a href="#" class="section-block__more">더보기 <i class="fa-solid fa-angle-right"></i></a>
+      </header>
+      <div id="preorders-content"></div>
+    </section>
+
+    <!-- 최신 트렌드 -->
+    <section class="section-block" aria-labelledby="photoblog-title">
+      <header class="section-block__header">
+        <div class="section-block__title-group">
+          <h2 class="section-block__title" id="photoblog-title">최신 트렌드</h2>
+          <p class="section-block__subtitle">이번 시즌 주목해야 할 스타일 리포트</p>
+        </div>
+        <a href="#" class="section-block__more">콘텐츠 더보기 <i class="fa-solid fa-angle-right"></i></a>
+      </header>
+      <div id="photoblog-content"></div>
+    </section>
+
+    <!-- 지금 뜨는 브랜드 -->
+    <section class="section-block" aria-labelledby="brands-title">
+      <header class="section-block__header">
+        <div class="section-block__title-group">
+          <h2 class="section-block__title" id="brands-title">지금 뜨는 브랜드</h2>
+          <p class="section-block__subtitle">이 취향을 완성하는 브랜드들</p>
+        </div>
+        <a href="#" class="section-block__more">브랜드 더보기 <i class="fa-solid fa-angle-right"></i></a>
+      </header>
+      <div id="brands-content"></div>
+    </section>
+
+    <!-- 카테고리 -->
+    <section class="section-block item-category" aria-labelledby="categories-title">
+      <header class="section-block__header">
+        <h2 class="section-block__title" id="categories-title">카테고리</h2>
+      </header>
+      <div id="categories-content"></div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+
+      <!-- 로고 + 태그라인 -->
+      <div class="footer__head">
+        <strong class="footer__logo">MUSINSA</strong>
+        <p class="footer__tagline">취향이 모이는 곳</p>
+      </div>
+
+      <!-- 링크 컬럼 -->
+      <nav class="footer__nav">
+        <div class="footer__nav-col">
+          <p class="footer__nav-heading">쇼핑</p>
+          <a href="#">신상품</a>
+          <a href="#">스냅</a>
+          <a href="#">매거진</a>
+          <a href="#">브랜드관</a>
+        </div>
+        <div class="footer__nav-col">
+          <p class="footer__nav-heading">고객지원</p>
+          <a href="#">고객센터</a>
+          <a href="#">배송안내</a>
+          <a href="#">반품·교환</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="footer__nav-col">
+          <p class="footer__nav-heading">회사</p>
+          <a href="#">회사소개</a>
+          <a href="#">채용</a>
+          <a href="#">파트너십</a>
+          <a href="#">뉴스룸</a>
+        </div>
+      </nav>
+
+      <!-- SNS -->
+      <div class="footer__sns-row">
+        <a href="#" class="footer__sns-link"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+        <a href="#" class="footer__sns-link"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
+        <a href="#" class="footer__sns-link"><i class="fa-brands fa-tiktok"></i><span>TikTok</span></a>
+        <a href="#" class="footer__sns-link"><i class="fa-brands fa-x-twitter"></i><span>X</span></a>
+      </div>
+
+      <!-- 사업자 정보 -->
+      <div class="footer__biz">
+        <p>(주) 무신사 &middot; 대표자 조만호, 조남성 &middot; 주소 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가, 무신사캠퍼스 엔1)</p>
+        <p>호스팅사업자 (주)무신사 &middot; 통신판매 2022-서울성동-01952 &middot; 사업자등록번호 211-88-79575</p>
+      </div>
+
+      <!-- 법적고지 + 카피라이트 -->
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용안내</a>
+        </div>
+        <p class="footer__copy">© 2026 MUSINSA Co., Ltd. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Onboarding Modal -->
+  <div class="onboarding-modal" id="onboardingModal" role="dialog" aria-modal="true" aria-labelledby="onboardingModalTitle">
+    <div class="onboarding-modal__backdrop" id="onboardingModalBackdrop"></div>
+    <div class="onboarding-modal__box">
+      <button type="button" class="onboarding-modal__close" id="onboardingModalClose" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+      <p class="onboarding-modal__eyebrow">5초 취향 선택</p>
+      <h2 class="onboarding-modal__title" id="onboardingModalTitle">어떤 스타일이 나에요?</h2>
+      <p class="onboarding-modal__desc">클러스터를 선택하면 나에게 맞는 피드가 열립니다</p>
+      <div class="onboarding-modal__clusters">
+        <button type="button" class="onboarding-modal__cluster" data-cluster="러닝코어">
+          <span class="onboarding-modal__cluster-label">#러닝코어</span>
+          <span class="onboarding-modal__cluster-sub">스포츠와 일상의 경계</span>
+        </button>
+        <button type="button" class="onboarding-modal__cluster" data-cluster="스트릿">
+          <span class="onboarding-modal__cluster-label">#스트릿</span>
+          <span class="onboarding-modal__cluster-sub">거리에서 태어난 감성</span>
+        </button>
+        <button type="button" class="onboarding-modal__cluster" data-cluster="빈티지">
+          <span class="onboarding-modal__cluster-label">#빈티지</span>
+          <span class="onboarding-modal__cluster-sub">시간이 만든 질감</span>
+        </button>
+        <button type="button" class="onboarding-modal__cluster" data-cluster="워크웨어">
+          <span class="onboarding-modal__cluster-label">#워크웨어</span>
+          <span class="onboarding-modal__cluster-sub">사무실도 주말도 하나로</span>
+        </button>
+        <button type="button" class="onboarding-modal__cluster" data-cluster="아웃도어">
+          <span class="onboarding-modal__cluster-label">#아웃도어</span>
+          <span class="onboarding-modal__cluster-sub">자연과 도시를 가로질러</span>
+        </button>
+        <button type="button" class="onboarding-modal__cluster" data-cluster="포멀">
+          <span class="onboarding-modal__cluster-label">#포멀</span>
+          <span class="onboarding-modal__cluster-sub">단정함의 새로운 기준</span>
+        </button>
+      </div>
+      <button type="button" class="onboarding-modal__skip" id="onboardingModalSkip">건너뛰기</button>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="검색">
+    <div class="search-overlay__backdrop" id="searchBackdrop"></div>
+    <div class="search-overlay__box">
+      <button type="button" class="search-overlay__submit" aria-label="검색 실행"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <input type="search" class="search-overlay__input" id="searchInput" placeholder="브랜드, 상품, 취향 키워드 검색" aria-label="검색어 입력" />
+      <button type="button" class="search-overlay__close" id="searchClose" aria-label="검색 닫기"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+
+  <!-- Scroll To Top -->
+  <button type="button" class="scroll-top" id="scrollTop" aria-label="맨 위로"><i class="fa-solid fa-chevron-up"></i></button>
+
+  <!-- Intro Modal -->
+  <div class="intro-modal" id="introModal" role="dialog" aria-modal="true" aria-labelledby="introModalTitle">
+    <div class="intro-modal__backdrop" id="introModalBackdrop"></div>
+    <div class="intro-modal__box">
+      <p class="intro-modal__label">PORTFOLIO PROJECT</p>
+      <h1 class="intro-modal__logo">MUSINSA</h1>
+      <p class="intro-modal__title" id="introModalTitle">이 프로젝트는 구직용<br>포트폴리오입니다.</p>
+      <p class="intro-modal__desc">실제 무신사와 무관한 UI/UX 포트폴리오입니다.</p>
+      <button type="button" class="intro-modal__cta" id="introModalEnter">사이트 둘러보기</button>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

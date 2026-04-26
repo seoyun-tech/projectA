@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TYPESERVICE × 러닝코어 — 스포티와 스트릿의 경계 | MUSINSA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/brand-story.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">MUSINSA</a>
+      <ul class="nav__menu">
+        <li class="nav__menu-item nav__menu-item--active" id="catMenuBtn" aria-expanded="false" aria-controls="catDropdown">카테고리 <i class="fa-solid fa-sort-down"></i></li>
+        <li class="nav__menu-item">스냅</li>
+        <li class="nav__menu-item">매거진</li>
+        <li class="nav__menu-item">매장</li>
+        <li class="nav__menu-item">브랜드</li>
+        <li class="nav__menu-item">더보기 <i class="fa-solid fa-sort-down"></i></li>
+      </ul>
+      <div class="nav__icons">
+        <div class="nav__icon-item nav__icon-item--desktop-only">
+          <i class="fa-regular fa-user"></i>
+          <i class="fa-solid fa-sort-down"></i>
+        </div>
+        <div class="nav__icon-item nav__icon-item--desktop-only"><i class="fa-regular fa-heart"></i></div>
+        <div class="nav__icon-item"><i class="fa-solid fa-cart-shopping"></i></div>
+      </div>
+      <!-- Category Dropdown -->
+      <div class="cat-dropdown" id="catDropdown" role="region" aria-label="카테고리 메뉴">
+        <div class="cat-dropdown__tabs" role="tablist">
+          <button type="button" class="cat-dropdown__tab cat-dropdown__tab--active" data-gender="men" role="tab">MEN</button>
+          <button type="button" class="cat-dropdown__tab" data-gender="women" role="tab" disabled>WOMEN</button>
+          <button type="button" class="cat-dropdown__tab" data-gender="kids" role="tab" disabled>KIDS</button>
+        </div>
+        <div class="cat-dropdown__grid" id="catDropdownGrid"></div>
+      </div>
+    </nav>
+    <div class="cat-backdrop" id="catBackdrop"></div>
+  </header>
+
+  <main>
+    <div class="bs-wrap">
+
+      <!-- Breadcrumb -->
+      <nav class="detail-breadcrumb">
+        <a href="index.html">홈</a>
+        <span class="detail-breadcrumb__sep"><i class="fa-solid fa-angle-right"></i></span>
+        <a href="#">브랜드 스토리</a>
+        <span class="detail-breadcrumb__sep"><i class="fa-solid fa-angle-right"></i></span>
+        <span class="detail-breadcrumb__current">TYPESERVICE × 러닝코어</span>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="bs-header">
+        <div class="bs-header__meta">
+          <span class="bs-header__tag">#러닝코어</span>
+          <span class="bs-header__sep-dot"></span>
+          <span class="bs-header__category">Brand Story</span>
+        </div>
+        <h1 class="bs-header__title">TYPESERVICE × 러닝코어<br>스포티와 스트릿의 경계</h1>
+        <div class="bs-header__byline">
+          <span class="bs-header__date">2026.04.10</span>
+          <span class="bs-header__sep">·</span>
+          <span class="bs-header__readtime">4분 읽기</span>
+        </div>
+      </header>
+
+      <!-- Hero Image -->
+      <div class="bs-hero">
+        <img src="assets/brand-story-1.jpg" alt="TYPESERVICE DRAW FIT" />
+      </div>
+
+      <!-- Article Body -->
+      <article class="bs-body">
+
+        <p class="bs-body__lead">
+          러닝화가 길을 벗어나 도심 한복판으로 들어온 것처럼, TYPESERVICE도 그 경계를 지웠다. 기능성 소재와 스트릿 감성이 만나는 지점 — 브랜드가 오랫동안 탐구해온 그 교차점이 이번 시즌 러닝코어 라인에서 가장 명확하게 드러났다.
+        </p>
+
+        <p class="bs-body__text">
+          TYPESERVICE의 이번 컬렉션은 단순히 스포츠웨어를 도시적으로 재해석한 것이 아니다. 러닝이라는 행위 자체가 가진 리듬과 에너지를 옷에 담으려 했다. 핵심 아이템인 Ruffled Stripe Zip Hoodie는 달릴 때의 바람 저항을 최소화하도록 설계된 패턴을 스트릿 감성의 러플 디테일과 결합했다. 입었을 때의 실루엣이 정지 상태와 움직임 상태 모두에서 완성되도록 — 그것이 디자이너의 핵심 의도였다.
+        </p>
+
+        <figure class="bs-body__figure">
+          <img src="assets/product-1.jpg" alt="Ruffled Stripe Zip Hoodie" />
+          <figcaption>Ruffled Stripe Zip Hoodie [Black] — ₩148,000</figcaption>
+        </figure>
+
+        <p class="bs-body__text">
+          소재 선택에서도 타협은 없었다. 면 60%와 폴리에스터 40%의 혼방은 땀 배출과 형태 유지의 균형을 맞추기 위한 오랜 테스트의 결과물이다. 러닝할 때는 기능적으로 작동하고, 카페에 앉았을 때는 테크웨어 감성으로 읽힌다. 브랜드가 '러닝코어'라는 키워드를 선택한 이유가 여기에 있다.
+        </p>
+
+        <p class="bs-body__text">
+          스트라이프 패턴은 보여주기 위한 장식이 아니다. 러닝 중 시인성을 높이는 기능적 요소로 설계됐지만, 절제된 배색 덕분에 일상 착용 시 코디의 포인트로도 작동한다. 이것이 TYPESERVICE가 말하는 '경계'의 실체다 — 스포츠와 스트릿, 기능과 감성이 서로를 배제하지 않고 공존하는 옷.
+        </p>
+
+        <p class="bs-body__closing">
+          달리는 서울의 새 시즌. TYPESERVICE는 이 도시의 속도에 맞춰 다음 컬렉션을 준비하고 있다.
+        </p>
+
+      </article>
+
+      <!-- Related Products -->
+      <section class="bs-products">
+        <h2 class="bs-products__title">이 스토리의 아이템</h2>
+        <div class="bs-products__grid">
+
+          <div class="product-card">
+            <div class="product-card__img-wrap product-card__img-wrap--link" data-url="detail.html">
+              <img src="assets/product-1.jpg" alt="TYPESERVICE" loading="lazy" />
+              <button type="button" class="product-card__wish" aria-label="찜하기"><i class="fa-regular fa-heart"></i></button>
+              <button type="button" class="product-card__cart" aria-label="장바구니 담기"><i class="fa-solid fa-bag-shopping"></i> 빠른 담기</button>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__desc">TYPESERVICE</p>
+              <p class="product-card__name">Ruffled Stripe Zip Hoodie [Black]</p>
+              <p class="product-card__price">₩148,000</p>
+              <p class="product-card__price-hint">▼ 6개월 최저가</p>
+              <p class="product-card__review">★ 4.9 · 892 리뷰</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="assets/product-2.jpg" alt="YESEYESEE" loading="lazy" />
+              <button type="button" class="product-card__wish" aria-label="찜하기"><i class="fa-regular fa-heart"></i></button>
+              <button type="button" class="product-card__cart" aria-label="장바구니 담기"><i class="fa-solid fa-bag-shopping"></i> 빠른 담기</button>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__desc">YESEYESEE</p>
+              <p class="product-card__name">Breeze Windbreaker [White]</p>
+              <p class="product-card__price">₩198,000</p>
+              <p class="product-card__price-hint">▼ 6개월 최저가</p>
+              <p class="product-card__review">★ 4.8 · 1,204 리뷰</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="assets/product-3.jpg" alt="NOHANT" loading="lazy" />
+              <button type="button" class="product-card__wish" aria-label="찜하기"><i class="fa-regular fa-heart"></i></button>
+              <button type="button" class="product-card__cart" aria-label="장바구니 담기"><i class="fa-solid fa-bag-shopping"></i> 빠른 담기</button>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__desc">NOHANT</p>
+              <p class="product-card__name">Hood Zip-up Jacket [Black]</p>
+              <p class="product-card__price">₩228,000</p>
+              <p class="product-card__price-hint">▼ 6개월 최저가</p>
+              <p class="product-card__review">★ 4.9 · 445 리뷰</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__img-wrap">
+              <img src="assets/product-4.jpg" alt="MUSINSA STANDARD" loading="lazy" />
+              <button type="button" class="product-card__wish" aria-label="찜하기"><i class="fa-regular fa-heart"></i></button>
+              <button type="button" class="product-card__cart" aria-label="장바구니 담기"><i class="fa-solid fa-bag-shopping"></i> 빠른 담기</button>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__desc">MUSINSA STANDARD</p>
+              <p class="product-card__name">Running Shorts [Navy]</p>
+              <p class="product-card__price">₩39,000</p>
+              <p class="product-card__review">★ 4.6 · 3,812 리뷰</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="detail-footer-gap"></div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/brand-story.js"></script>
+</body>
+</html>
