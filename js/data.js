@@ -1,5 +1,3 @@
-// ── Gender Clusters & Trending Keywords ───────────────────────────────────
-
 const GENDER_CLUSTERS = {
   men: [
     { label: '러닝코어', key: 'running' },
@@ -15,27 +13,21 @@ const TRENDING_KEYWORDS = {
   running: ['#러닝코어', '#오버핏', '#한강런', '#스포티', '#트랙팬츠', '#고프코어', '#테크웨어', '#캠퍼스런', '#가을러닝'],
 };
 
-
-// ── Hero Slides ────────────────────────────────────────────────────────────
-
 const HERO_SLIDES = [
   { gender: 'men', img: 'hero-1.jpg',  label: '2025 F/W',            title: '지금 서울이\n입는 것들',        sub: '이 계절을 가장 잘 아는 브랜드들',               btn: '쇼핑하기'      },
   { gender: 'men', img: 'hero-2.jpg',  label: '2025 F/W COLLECTION', title: '가을의 기준',                   sub: '사무실도, 주말도 — 하나의 코트로',             btn: '컬렉션 보기'   },
   { gender: 'men', img: 'hero-3.jpg',  label: '#빈티지',             title: '시간이 만든\n질감을 입다',      sub: 'TUOMIO · GILAARCHIVE 시즌 컬렉션',            btn: '빈티지 보기'   },
   { gender: 'men', img: 'hero-4.jpg',  label: '#러닝코어',           title: '달리는 서울의\n새 시즌',        sub: 'NOHANT · YESEYESEE 아우터 컬렉션',            btn: '러닝코어 보기' },
 
-  { gender: 'women', img: 'snap-2.png',  label: '2025 F/W WOMEN', title: '나만의 시즌을\n정의하다',   sub: '미니멀걸·워크웨어 — 코트로 완성하는 스타일',    btn: '둘러보기'      },
-  { gender: 'women', img: 'feature-3.png',   label: "EDITOR'S PICK",  title: '오피스룩의\n새 기준',      sub: '윈터 워크웨어 클러스터 에디터 추천',            btn: '에디터 픽 보기'},
-  { gender: 'women', img: 'snap-4.png',  label: '#미니멀걸',      title: '덜어낼수록\n선명해지는',   sub: 'LINGSEOUL · MATIN KIM 레이어드 컬렉션',         btn: '미니멀걸 보기' },
-  { gender: 'women', img: 'feature-2.png',   label: 'NEW DROP',       title: 'F/W 시즌의\n첫 번째 드롭', sub: '이번 시즌 가장 주목받는 니트와 아우터',         btn: '신상품 보기'   },
+  { gender: 'women', img: 'snap-2.jpg',    label: '2025 F/W WOMEN',  title: '나만의 시즌을\n정의하다',    sub: '미니멀걸·워크웨어 — 코트로 완성하는 스타일',   btn: '둘러보기'       },
+  { gender: 'women', img: 'feature-3.png', label: "EDITOR'S PICK",   title: '오피스룩의\n새 기준',        sub: '윈터 워크웨어 클러스터 에디터 추천',           btn: '에디터 픽 보기' },
+  { gender: 'women', img: 'snap-4.jpg',    label: '#미니멀걸',       title: '덜어낼수록\n선명해지는',     sub: 'LINGSEOUL · MATIN KIM 레이어드 컬렉션',        btn: '미니멀걸 보기'  },
+  { gender: 'women', img: 'feature-2.png', label: 'NEW DROP',        title: 'F/W 시즌의\n첫 번째 드롭',  sub: '이번 시즌 가장 주목받는 니트와 아우터',        btn: '신상품 보기'    },
 
-  { gender: 'kids', img: 'hero-1.png',    label: '2025 F/W KIDS',  title: '작은 패션의\n큰 이야기',    sub: '아이부터 주니어까지, FW 신상',                  btn: '키즈 쇼핑하기' },
-  { gender: 'kids', img: 'hero-2.png',    label: 'KIDS NEW SEASON',title: '겨울 외출엔\n이 룩으로',    sub: '유아부터 초등까지 F/W 필수 아이템',             btn: 'FW 신상 보기'  },
-  { gender: 'kids', img: 'feature-4.png', label: 'KIDS OUTDOOR',   title: '뛰어도 따뜻한\n아웃도어 룩',sub: '활동적인 아이를 위한 윈터 스포츠 스타일',      btn: '아웃도어 보기' },
+  { gender: 'kids', img: 'hero-1.jpg',    label: '2025 F/W KIDS',   title: '작은 패션의\n큰 이야기',     sub: '아이부터 주니어까지, FW 신상',                 btn: '키즈 쇼핑하기'  },
+  { gender: 'kids', img: 'hero-2.jpg',    label: 'KIDS NEW SEASON', title: '겨울 외출엔\n이 룩으로',     sub: '유아부터 초등까지 F/W 필수 아이템',            btn: 'FW 신상 보기'   },
+  { gender: 'kids', img: 'feature-4.png', label: 'KIDS OUTDOOR',   title: '뛰어도 따뜻한\n아웃도어 룩', sub: '활동적인 아이를 위한 윈터 스포츠 스타일',      btn: '아웃도어 보기'  },
 ];
-
-
-// ── Cluster Products (당신을 위한 픽) ──────────────────────────────────────
 
 const CLUSTER_PRODUCTS = {
   running: [
@@ -44,14 +36,11 @@ const CLUSTER_PRODUCTS = {
     { img: 'product-3.jpg',  brand: 'NOHANT',           name: 'Hood Zip-up Jacket [Black]',         price: '₩228,000', priceHint: '▼ 6개월 최저가', review: '★ 4.9 · 445 리뷰'   },
     { img: 'product-4.jpg',  brand: 'MUSINSA STANDARD', name: 'Running Shorts [Navy]',              price: '₩39,000',                               review: '★ 4.6 · 3,812 리뷰' },
     { img: 'product-5.jpg',  brand: 'GILAARCHIVE',      name: 'Archive Tech Jacket [Olive]',        price: '₩318,000',                              review: '★ 4.7 · 312 리뷰'   },
-    { img: 'product-6.jpg',  brand: 'RUNNING BRAND',    name: 'Pro Runner Cap [Grey]',              price: '₩45,000',                               review: '★ 4.8 · 152 리뷰'   },
-    { img: 'product-7.jpg',  brand: 'RUNNING BRAND',    name: 'Lightweight Running Vest',           price: '₩128,000',                              review: '★ 4.9 · 89 리뷰'    },
-    { img: 'product-8.jpg',  brand: 'RUNNING BRAND',    name: 'Performance Crew Socks',             price: '₩12,000',                               review: '★ 4.7 · 2,104 리뷰' },
+    { img: 'product-6.jpg',  brand: 'SALOMON',          name: 'Speedcross 6 Running Cap',           price: '₩45,000',                               review: '★ 4.8 · 152 리뷰'   },
+    { img: 'product-7.jpg',  brand: 'TUOMIO',           name: 'Lightweight Mesh Running Vest',      price: '₩128,000',                              review: '★ 4.9 · 89 리뷰'    },
+    { img: 'product-8.jpg',  brand: 'MUSINSA STANDARD', name: 'Cushion Running Ankle Socks 3-Pack', price: '₩12,000',                               review: '★ 4.7 · 2,104 리뷰' },
   ],
 };
-
-
-// ── Cluster Latest Products (최신 상품) ───────────────────────────────────
 
 const CLUSTER_LATEST_PRODUCTS = {
   running: [
@@ -60,14 +49,11 @@ const CLUSTER_LATEST_PRODUCTS = {
     { img: 'latest-3.jpg',  brand: 'NOHANT',           name: 'Hood Zip-up Jacket [Black]',         price: '₩228,000', priceHint: '▼ 6개월 최저가', review: '★ 4.9 · 445 리뷰'   },
     { img: 'latest-4.jpg',  brand: 'MUSINSA STANDARD', name: 'Running Shorts [Navy]',              price: '₩39,000',                               review: '★ 4.6 · 3,812 리뷰' },
     { img: 'latest-5.png',  brand: 'GILAARCHIVE',      name: 'Archive Tech Jacket [Olive]',        price: '₩318,000',                              review: '★ 4.7 · 312 리뷰'   },
-    { img: 'latest-6.jpg',  brand: 'RUNNING BRAND',    name: 'Pro Runner Cap [Grey]',              price: '₩45,000',                               review: '★ 4.8 · 152 리뷰'   },
-    { img: 'latest-7.jpg',  brand: 'RUNNING BRAND',    name: 'Lightweight Running Vest',           price: '₩128,000',                              review: '★ 4.9 · 89 리뷰'    },
-    { img: 'latest-8.jpg',  brand: 'RUNNING BRAND',    name: 'Performance Crew Socks',             price: '₩12,000',                               review: '★ 4.7 · 2,104 리뷰' },
+    { img: 'latest-6.jpg',  brand: 'Y.ARCHIVE',        name: 'Washed Cotton Run Bucket Hat',       price: '₩38,000',                               review: '★ 4.6 · 203 리뷰'   },
+    { img: 'latest-7.jpg',  brand: 'GENERAL IDEA',     name: 'Packable Trail Wind Vest',           price: '₩112,000',                              review: '★ 4.8 · 74 리뷰'    },
+    { img: 'latest-8.jpg',  brand: 'MUSINSA STANDARD', name: 'Terry Crew Sports Socks',            price: '₩9,900',                                review: '★ 4.7 · 3,481 리뷰' },
   ],
 };
-
-
-// ── Cluster Brand Stories (브랜드 스토리) ─────────────────────────────────
 
 const CLUSTER_BRAND_STORIES = {
   running: [
@@ -82,8 +68,14 @@ const CLUSTER_BRAND_STORIES = {
   ],
 };
 
-
-// ── Street Snaps ───────────────────────────────────────────────────────────
+const SNAP_LOOK = {
+  snapIdx: 0,
+  items: [
+    { img: 'product-2.jpg', brand: 'YESEYESEE',        name: 'Breeze Windbreaker [White]',  price: '₩198,000', url: 'detail.html' },
+    { img: 'product-3.jpg', brand: 'NOHANT',            name: 'Hood Zip-up Jacket [Black]',  price: '₩228,000', url: 'detail.html' },
+    { img: 'product-4.jpg', brand: 'MUSINSA STANDARD',  name: 'Running Shorts [Navy]',       price: '₩39,000',  url: 'detail.html' },
+  ],
+};
 
 const STREET_SNAPS = [
   { img: 'snap-1.jpg', username: '@yeseyesee_official', tag: '#오버핏후드',   size: 'large' },
@@ -95,9 +87,6 @@ const STREET_SNAPS = [
   { img: 'snap-7.jpg', username: '@lingseoul',          tag: '#러닝룩'                      },
   { img: 'snap-8.jpg', username: '@generalidea',        tag: '#그래픽캐주얼'                },
 ];
-
-
-// ── Cluster Rankings (베스트 아이템) ───────────────────────────────────────
 
 const CLUSTER_RANKINGS = {
   running: [
@@ -112,38 +101,29 @@ const CLUSTER_RANKINGS = {
   ],
 };
 
-
-// ── Cluster Pre-orders ─────────────────────────────────────────────────────
-
 const CLUSTER_PREORDERS = {
   running: [
-    { img: 'preorder-1.jpg', brand: 'NOHANT',           price: '₩198,000', deadline: 2,  ship: '8월 초'  },
+    { img: 'preorder-1.jpg', brand: 'NOHANT',           price: '₩198,000', deadline: 2,  ship: '8월 초'   },
     { img: 'preorder-2.jpg', brand: 'YESEYESEE',        price: '₩89,000',  deadline: 5,  ship: '8월 중순' },
-    { img: 'preorder-3.jpg', brand: 'TYPESERVICE',      price: '₩268,000', deadline: 7,  ship: '8월 말'  },
-    { img: 'preorder-4.jpg', brand: 'MUSINSA STANDARD', price: '₩58,000',  deadline: 1,  ship: '8월 초'  },
-    { img: 'preorder-5.jpg', brand: 'GILAARCHIVE',      price: '₩318,000', deadline: 10, ship: '9월 초'  },
+    { img: 'preorder-3.jpg', brand: 'TYPESERVICE',      price: '₩268,000', deadline: 7,  ship: '8월 말'   },
+    { img: 'preorder-4.jpg', brand: 'MUSINSA STANDARD', price: '₩58,000',  deadline: 1,  ship: '8월 초'   },
+    { img: 'preorder-5.jpg', brand: 'GILAARCHIVE',      price: '₩318,000', deadline: 10, ship: '9월 초'   },
     { img: 'preorder-6.jpg', brand: 'YESEYESEE',        price: '₩145,000', deadline: 3,  ship: '8월 중순' },
-    { img: 'preorder-7.jpg', brand: 'NOHANT',           price: '₩189,000', deadline: 6,  ship: '8월 말'  },
+    { img: 'preorder-7.jpg', brand: 'NOHANT',           price: '₩189,000', deadline: 6,  ship: '8월 말'   },
     { img: 'preorder-8.jpg', brand: 'TYPESERVICE',      price: '₩210,000', deadline: 14, ship: '9월 중순' },
   ],
 };
 
-
-// ── Cluster Brands ─────────────────────────────────────────────────────────
-
 const CLUSTER_BRANDS = {
   running: [
-    { logo: '<img src="assets/brand-underarmour.svg" alt="Under Armour" />',    name: 'Under Armour'     },
-    { logo: '<img src="assets/brand-adidas.png" alt="adidas" />',               name: 'adidas'           },
+    { logo: '<img src="assets/brand-underarmour.svg" alt="Under Armour" />',         name: 'Under Armour'     },
+    { logo: '<img src="assets/brand-adidas.png" alt="adidas" />',                    name: 'adidas'           },
     { logo: '<img src="assets/brand-musinsa-standard.png" alt="MUSINSA STANDARD" />', name: 'MUSINSA STANDARD' },
-    { logo: '<img src="assets/brand-nike.png" alt="Nike" />',                   name: 'Nike'             },
-    { logo: '<img src="assets/brand-salomon.png" alt="Salomon" />',             name: 'Salomon'          },
-    { logo: '<img src="assets/brand-lululemon.png" alt="lululemon" />',         name: 'lululemon'        },
+    { logo: '<img src="assets/brand-nike.png" alt="Nike" />',                        name: 'Nike'             },
+    { logo: '<img src="assets/brand-salomon.png" alt="Salomon" />',                  name: 'Salomon'          },
+    { logo: '<img src="assets/brand-lululemon.png" alt="lululemon" />',              name: 'lululemon'        },
   ],
 };
-
-
-// ── Categories ─────────────────────────────────────────────────────────────
 
 const CATEGORY_ITEMS = {
   men: [
@@ -166,9 +146,6 @@ const CATEGORY_ITEMS = {
     '샌들/부츠','가방/백팩','모자/캡','속옷/파자마','장갑/목도리','세일',
   ],
 };
-
-
-// ── Photoblog Long Entries ─────────────────────────────────────────────────
 
 const PHOTOBLOG_ENTRIES = {
   men: [

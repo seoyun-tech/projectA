@@ -143,6 +143,7 @@ const Interactions = {
     this.initBrandStoryLinks();
     this.initCartButtons();
     this.initSnapActions();
+    this.initSnapLookModal();
     this.initSearch();
     this.initScrollTop();
     this.initClusterTooltip();
@@ -270,6 +271,38 @@ const Interactions = {
     });
   },
 
+  initSnapLookModal() {
+    const modal = document.getElementById('snapLookModal');
+    const list = document.getElementById('snapLookList');
+    if (!modal) return;
+
+    const close = () => {
+      modal.classList.remove('snap-look-modal--open');
+      document.body.style.overflow = '';
+    };
+
+    document.getElementById('snapLookClose').addEventListener('click', close);
+    document.getElementById('snapLookBackdrop').addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+    document.addEventListener('click', e => {
+      const card = e.target.closest('[data-snap-look]');
+      if (!card || e.target.closest('.lookbook-snap-card__action-btn')) return;
+      list.innerHTML = SNAP_LOOK.items.map(item => `
+        <a href="${item.url}" class="snap-look-item">
+          <div class="snap-look-item__img"><img src="assets/${item.img}" alt="${item.brand}" loading="lazy" /></div>
+          <div class="snap-look-item__info">
+            <p class="snap-look-item__brand">${item.brand}</p>
+            <p class="snap-look-item__name">${item.name}</p>
+            <p class="snap-look-item__price">${item.price}</p>
+            <span class="snap-look-item__cta">상품 보러가기 <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>`).join('');
+      modal.classList.add('snap-look-modal--open');
+      document.body.style.overflow = 'hidden';
+    });
+  },
+
   initSnapActions() {
     document.addEventListener('click', e => {
       const btn = e.target.closest('.lookbook-snap-card__action-btn');
@@ -289,7 +322,7 @@ const Interactions = {
     document.body.appendChild(tooltip);
 
     document.addEventListener('mouseover', e => {
-      const item = e.target.closest('.scroll-nav__item[data-tooltip]');
+      const item = e.target.closest('.scroll-nav__item[data-tooltip], .hero__gender-tab[data-tooltip]');
       if (!item) return;
       const rect = item.getBoundingClientRect();
       tooltip.textContent = item.dataset.tooltip;
@@ -299,7 +332,7 @@ const Interactions = {
     });
 
     document.addEventListener('mouseout', e => {
-      if (!e.target.closest('.scroll-nav__item[data-tooltip]')) return;
+      if (!e.target.closest('.scroll-nav__item[data-tooltip], .hero__gender-tab[data-tooltip]')) return;
       tooltip.classList.remove('nav-tooltip--visible');
     });
   },

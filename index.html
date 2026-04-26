@@ -13,7 +13,6 @@
 </head>
 <body>
 
-  <!-- Flash Sale Strip -->
   <aside class="flash-strip" aria-label="플래시 세일 안내">
     <div class="flash-strip__inner">
       <span class="flash-strip__icon"><i class="fa-solid fa-bolt"></i></span>
@@ -27,7 +26,6 @@
     </div>
   </aside>
 
-  <!-- Navigation -->
   <header>
     <nav class="nav" aria-label="주요 메뉴">
       <a href="index.html" class="nav__logo">MUSINSA</a>
@@ -60,7 +58,6 @@
       <button type="button" class="nav__hamburger" id="navHamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navDrawer">
         <span></span><span></span><span></span>
       </button>
-      <!-- Category Dropdown -->
       <div class="cat-dropdown" id="catDropdown" role="region" aria-label="카테고리 메뉴">
         <div class="cat-dropdown__tabs" role="tablist">
           <button type="button" class="cat-dropdown__tab cat-dropdown__tab--active" data-gender="men" role="tab">MEN</button>
@@ -73,7 +70,6 @@
     <div class="cat-backdrop" id="catBackdrop"></div>
   </header>
 
-  <!-- Mobile Nav Drawer -->
   <div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="사이트 메뉴">
     <div class="nav-drawer__overlay" id="navDrawerOverlay"></div>
     <div class="nav-drawer__panel">
@@ -103,14 +99,12 @@
     </div>
   </div>
 
-  <!-- Gender Tab Bar -->
   <div class="hero__gender-tabs" role="tablist" aria-label="성별 선택">
     <button type="button" class="hero__gender-tab hero__gender-tab--active" role="tab" aria-selected="true" data-gender="men">MEN</button>
-    <button type="button" class="hero__gender-tab" role="tab" aria-selected="false" data-gender="women" disabled>WOMEN</button>
-    <button type="button" class="hero__gender-tab" role="tab" aria-selected="false" data-gender="kids" disabled>KIDS</button>
+    <button type="button" class="hero__gender-tab" role="tab" aria-selected="false" data-gender="women" data-tooltip="이번 데모는 MEN 축으로 시연합니다. 동일 패턴이 WOMEN·KIDS에도 적용됩니다." disabled>WOMEN</button>
+    <button type="button" class="hero__gender-tab" role="tab" aria-selected="false" data-gender="kids" data-tooltip="이번 데모는 MEN 축으로 시연합니다. 동일 패턴이 WOMEN·KIDS에도 적용됩니다." disabled>KIDS</button>
   </div>
 
-  <!-- Hero Section -->
   <section class="hero" aria-label="메인 배너">
     <div class="hero__slider"></div>
     <div class="hero__pager" id="heroPager" role="group" aria-label="슬라이드 탐색"></div>
@@ -118,20 +112,17 @@
     <button type="button" class="hero__arrow hero__arrow--next" id="heroNext" aria-label="다음 슬라이드"><i class="fa-solid fa-chevron-right"></i></button>
   </section>
 
-  <!-- Onboarding Banner -->
   <aside class="onboarding-banner" id="onboardingBanner" aria-label="취향 설정 안내">
     <span>어떤 스타일이 나에요? 5초 취향 선택 →</span>
     <button type="button" class="onboarding-banner__close" id="onboardingClose">닫기</button>
   </aside>
 
-  <!-- Scroll Nav -->
   <nav class="scroll-nav" aria-label="스타일 클러스터 탐색">
     <ul class="scroll-nav__list"></ul>
   </nav>
 
   <main class="main-content">
 
-    <!-- 당신을 위한 픽 -->
     <section class="section-block" aria-labelledby="pick-title">
       <header class="section-block__header">
         <div class="section-block__title-group">
@@ -143,7 +134,6 @@
       <div data-render="products"></div>
     </section>
 
-    <!-- 브랜드 스토리 -->
     <section class="section-block" aria-labelledby="brand-story-title">
       <header class="section-block__header">
         <div class="section-block__title-group">
@@ -155,7 +145,6 @@
       <div id="brand-stories-content"></div>
     </section>
 
-    <!-- 스트리트 스냅 -->
     <section class="section-block" aria-labelledby="snaps-title">
       <header class="section-block__header">
         <div class="section-block__title-group">
@@ -167,7 +156,6 @@
       <div class="lookbook-snap-grid" id="snaps-content"></div>
     </section>
 
-    <!-- 최신 상품 -->
     <section class="section-block" aria-labelledby="latest-title">
       <header class="section-block__header">
         <div class="section-block__title-group">
@@ -178,20 +166,17 @@
       <div data-render="latest-products"></div>
     </section>
 
-    <!-- Editorial Break -->
     <aside class="editorial-break" aria-label="취향 탐색 유도">
       <p class="editorial-break__eyebrow">당신의 취향이 여기 있습니다</p>
       <h2 class="editorial-break__title">스크롤하다 발견하는<br>나만의 스타일</h2>
       <a href="#" class="editorial-break__cta">취향 찾아보기 <i class="fa-solid fa-arrow-right"></i></a>
     </aside>
 
-    <!-- 지금 뜨는 키워드 -->
     <section class="trending-keywords" aria-labelledby="keywords-title">
       <h2 class="trending-keywords__title" id="keywords-title">지금 뜨는 키워드</h2>
       <div class="trending-keywords__lists"></div>
     </section>
 
-    <!-- 베스트 아이템 -->
     <section class="section-block" aria-labelledby="rankings-title">
       <header class="section-block__header">
         <div class="section-block__title-group">
@@ -202,7 +187,6 @@
       <div id="rankings-content"></div>
     </section>
 
-    <!-- PRE ORDER -->
     <section class="section-block section-block--cream" aria-labelledby="preorder-title">
       <header class="section-block__header">
         <div class="section-block__title-group">
@@ -213,7 +197,6 @@
       <div id="preorders-content"></div>
     </section>
 
-    <!-- 최신 트렌드 -->
     <section class="section-block" aria-labelledby="photoblog-title">
       <header class="section-block__header">
         <div class="section-block__title-group">
@@ -225,7 +208,6 @@
       <div id="photoblog-content"></div>
     </section>
 
-    <!-- 지금 뜨는 브랜드 -->
     <section class="section-block" aria-labelledby="brands-title">
       <header class="section-block__header">
         <div class="section-block__title-group">
@@ -237,7 +219,6 @@
       <div id="brands-content"></div>
     </section>
 
-    <!-- 카테고리 -->
     <section class="section-block item-category" aria-labelledby="categories-title">
       <header class="section-block__header">
         <h2 class="section-block__title" id="categories-title">카테고리</h2>
@@ -247,17 +228,14 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="footer__inner">
 
-      <!-- 로고 + 태그라인 -->
       <div class="footer__head">
         <strong class="footer__logo">MUSINSA</strong>
         <p class="footer__tagline">취향이 모이는 곳</p>
       </div>
 
-      <!-- 링크 컬럼 -->
       <nav class="footer__nav">
         <div class="footer__nav-col">
           <p class="footer__nav-heading">쇼핑</p>
@@ -282,7 +260,6 @@
         </div>
       </nav>
 
-      <!-- SNS -->
       <div class="footer__sns-row">
         <a href="#" class="footer__sns-link"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
         <a href="#" class="footer__sns-link"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
@@ -290,13 +267,11 @@
         <a href="#" class="footer__sns-link"><i class="fa-brands fa-x-twitter"></i><span>X</span></a>
       </div>
 
-      <!-- 사업자 정보 -->
       <div class="footer__biz">
         <p>(주) 무신사 &middot; 대표자 조만호, 조남성 &middot; 주소 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가, 무신사캠퍼스 엔1)</p>
         <p>호스팅사업자 (주)무신사 &middot; 통신판매 2022-서울성동-01952 &middot; 사업자등록번호 211-88-79575</p>
       </div>
 
-      <!-- 법적고지 + 카피라이트 -->
       <div class="footer__bottom">
         <div class="footer__legal">
           <a href="#">이용약관</a>
@@ -309,7 +284,6 @@
     </div>
   </footer>
 
-  <!-- Onboarding Modal -->
   <div class="onboarding-modal" id="onboardingModal" role="dialog" aria-modal="true" aria-labelledby="onboardingModalTitle">
     <div class="onboarding-modal__backdrop" id="onboardingModalBackdrop"></div>
     <div class="onboarding-modal__box">
@@ -347,7 +321,6 @@
     </div>
   </div>
 
-  <!-- Search Overlay -->
   <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="검색">
     <div class="search-overlay__backdrop" id="searchBackdrop"></div>
     <div class="search-overlay__box">
@@ -357,18 +330,35 @@
     </div>
   </div>
 
-  <!-- Scroll To Top -->
   <button type="button" class="scroll-top" id="scrollTop" aria-label="맨 위로"><i class="fa-solid fa-chevron-up"></i></button>
 
-  <!-- Intro Modal -->
   <div class="intro-modal" id="introModal" role="dialog" aria-modal="true" aria-labelledby="introModalTitle">
     <div class="intro-modal__backdrop" id="introModalBackdrop"></div>
     <div class="intro-modal__box">
       <p class="intro-modal__label">PORTFOLIO PROJECT</p>
       <h1 class="intro-modal__logo">MUSINSA</h1>
-      <p class="intro-modal__title" id="introModalTitle">이 프로젝트는 구직용<br>포트폴리오입니다.</p>
-      <p class="intro-modal__desc">실제 무신사와 무관한 UI/UX 포트폴리오입니다.</p>
+      <p class="intro-modal__title" id="introModalTitle">오프라인 백화점의 공간 설계를<br>디지털로 옮긴 무신사 리디자인입니다.</p>
+      <p class="intro-modal__notice"><i class="fa-solid fa-circle-info"></i>구직용 UI/UX 포트폴리오 · 실제 무신사와 무관합니다</p>
       <button type="button" class="intro-modal__cta" id="introModalEnter">사이트 둘러보기</button>
+    </div>
+  </div>
+
+  <div class="snap-look-modal" id="snapLookModal" role="dialog" aria-modal="true" aria-labelledby="snapLookTitle">
+    <div class="snap-look-modal__backdrop" id="snapLookBackdrop"></div>
+    <div class="snap-look-modal__box">
+      <button type="button" class="snap-look-modal__close" id="snapLookClose" aria-label="닫기"><i class="fa-solid fa-xmark"></i></button>
+      <div class="snap-look-modal__snap">
+        <img src="assets/snap-1.jpg" alt="@yeseyesee_official" />
+        <div class="snap-look-modal__snap-meta">
+          <p class="snap-look-modal__username">@yeseyesee_official</p>
+          <p class="snap-look-modal__snap-tag">#오버핏후드</p>
+        </div>
+      </div>
+      <div class="snap-look-modal__panel">
+        <p class="snap-look-modal__eyebrow">SHOP THE LOOK</p>
+        <h3 class="snap-look-modal__title" id="snapLookTitle">이 룩에 사용된 아이템</h3>
+        <div class="snap-look-modal__list" id="snapLookList"></div>
+      </div>
     </div>
   </div>
 

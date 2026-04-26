@@ -1,5 +1,3 @@
-// ── Primitive card builders ────────────────────────────────────────────────
-
 const productCardHTML = (p) => `
   <div class="product-card">
     <div class="product-card__img-wrap${p.url ? ' product-card__img-wrap--link' : ''}"${p.url ? ` data-url="${p.url}"` : ''}>
@@ -48,19 +46,19 @@ const rankingCardHTML = (item, rank) => `
   </div>`;
 
 const preorderCardHTML = (item) => `
-  <div class="ranking-card">
-    <div class="ranking-card__img-wrap">
+  <div class="preorder-card">
+    <div class="preorder-card__img-wrap">
       <img src="assets/${item.img}" alt="${item.brand}" loading="lazy" />
-      <span class="ranking-card__badge">PRE ORDER</span>
+      <span class="preorder-card__badge">PRE ORDER</span>
       <button type="button" class="product-card__wish" aria-label="찜하기"><i class="fa-regular fa-heart"></i></button>
       <button type="button" class="product-card__cart" aria-label="장바구니 담기"><i class="fa-solid fa-bag-shopping"></i> 빠른 담기</button>
     </div>
-    <div class="ranking-card__info">
-      <p class="ranking-card__brand">${item.brand}</p>
-      <p class="ranking-card__price">${item.price}</p>
-      <p class="ranking-card__preorder-meta">
-        <span class="ranking-card__deadline">D-${item.deadline}</span>
-        <span class="ranking-card__ship">${item.ship} 배송 예정</span>
+    <div class="preorder-card__info">
+      <p class="preorder-card__brand">${item.brand}</p>
+      <p class="preorder-card__price">${item.price}</p>
+      <p class="preorder-card__meta">
+        <span class="preorder-card__deadline">D-${item.deadline}</span>
+        <span class="preorder-card__ship">${item.ship} 배송 예정</span>
       </p>
     </div>
   </div>`;
@@ -71,10 +69,11 @@ const brandCardHTML = (b) => `
     <p class="brand-card__name">${b.name}</p>
   </div>`;
 
-const snapCardHTML = (snap) => {
+const snapCardHTML = (snap, idx) => {
   const sizeClass = snap.size ? ` lookbook-snap-card--${snap.size}` : '';
+  const isShoppable = idx === SNAP_LOOK.snapIdx;
   return `
-    <div class="lookbook-snap-card${sizeClass}">
+    <div class="lookbook-snap-card${sizeClass}${isShoppable ? ' lookbook-snap-card--shoppable' : ''}"${isShoppable ? ' data-snap-look="true"' : ''}>
       <div class="lookbook-snap-card__img">
         <img src="assets/${snap.img}" alt="${snap.username}" loading="lazy" />
       </div>
@@ -92,6 +91,7 @@ const snapCardHTML = (snap) => {
           <i class="fa-regular fa-bookmark"></i>
         </button>
       </div>
+      ${isShoppable ? '<div class="lookbook-snap-card__shop-badge"><i class="fa-solid fa-bag-shopping"></i> SHOP THE LOOK</div>' : ''}
     </div>`;
 };
 
@@ -120,9 +120,6 @@ const photoblogEntryHTML = (entry, isReverse) => {
     </article>`;
 };
 
-
-// ── Cluster panel builder ──────────────────────────────────────────────────
-
 const renderClusterPanels = (container, clusterData, gridClass, cardBuilder) => {
   container.innerHTML = Object.entries(clusterData)
     .map(([key, items], panelIdx) => {
@@ -134,9 +131,6 @@ const renderClusterPanels = (container, clusterData, gridClass, cardBuilder) => 
     })
     .join('');
 };
-
-
-// ── Section renderers ──────────────────────────────────────────────────────
 
 const renderHeroSlides = () => {
   const slider = document.querySelector('.hero__slider');
@@ -239,9 +233,6 @@ const renderPhotoblog = (gender = 'men') => {
     .map((entry, i) => photoblogEntryHTML(entry, i % 2 === 1))
     .join('');
 };
-
-
-// ── Init ──────────────────────────────────────────────────────────────────
 
 const renderAll = () => {
   renderHeroSlides();

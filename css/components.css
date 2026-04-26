@@ -1,7 +1,3 @@
-/* ==========================================================================
-   Flash Sale Strip
-   ========================================================================== */
-
 .flash-strip {
   display: flex;
   align-items: center;
@@ -34,10 +30,6 @@
 .flash-strip__close { font-size: 16px; opacity: 0.7; transition: var(--transition); }
 .flash-strip__close:hover { opacity: 1; }
 .flash-strip--dismissed { display: none; }
-
-/* ==========================================================================
-   Nav Drawer
-   ========================================================================== */
 
 .nav-drawer { position: fixed; inset: 0; z-index: var(--z-drawer); display: none; }
 .nav-drawer--open { display: block; }
@@ -84,10 +76,6 @@
 .nav-drawer__profile-link i { font-size: 16px; color: var(--clr-secondary); }
 .nav-drawer__profile-link:hover { background: var(--clr-bg-sub); color: var(--clr-primary); }
 
-/* ==========================================================================
-   Profile Dropdown
-   ========================================================================== */
-
 .profile-dropdown { position: relative; }
 
 .profile-dropdown__panel {
@@ -125,10 +113,6 @@
 @media (max-width: 768px) {
   .profile-dropdown { display: none; }
 }
-
-/* ==========================================================================
-   Product Card
-   ========================================================================== */
 
 .product-card__img-wrap { position: relative; aspect-ratio: 3/4; margin-bottom: 8px; background: var(--clr-bg-light); overflow: hidden; }
 .product-card__img-wrap--link { cursor: pointer; }
@@ -171,7 +155,8 @@
   transition: transform 0.25s ease;
 }
 .product-card:hover .product-card__cart,
-.ranking-card:hover .product-card__cart { transform: translateY(0); }
+.ranking-card:hover .product-card__cart,
+.preorder-card:hover .product-card__cart { transform: translateY(0); }
 
 .product-card__desc { margin-bottom: 4px; color: var(--clr-light); font-size: 11px; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .product-card__name { margin-bottom: 4px; color: var(--clr-secondary); font-size: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -180,10 +165,6 @@
 .product-card__review { margin: 1px 0 6px; color: var(--clr-muted); font-size: 11px; }
 .product-card__detail { display: flex; align-items: center; gap: 4px; color: var(--clr-accent-blue); font-size: 12px; font-weight: 300; }
 .product-card__detail:hover { text-decoration: underline; }
-
-/* ==========================================================================
-   Brand Story Card
-   ========================================================================== */
 
 .brand-story-card--link { cursor: pointer; }
 .brand-story-card__img-wrap { aspect-ratio: 3/4; margin-bottom: 12px; background: var(--clr-bg-light); overflow: hidden; }
@@ -195,10 +176,6 @@
 .brand-story-card:hover .brand-story-card__title { opacity: 0.65; }
 .brand-story-card__date { color: var(--clr-light); font-size: 11px; margin-top: 4px; display: block; }
 
-/* ==========================================================================
-   Ranking Card
-   ========================================================================== */
-
 .ranking-card__num { display: block; margin-bottom: 8px; color: var(--clr-secondary); font-size: 20px; font-weight: 300; line-height: 1; }
 .ranking-card:nth-child(1) .ranking-card__num { color: var(--clr-gold); font-weight: 700; }
 .ranking-card:nth-child(2) .ranking-card__num { color: var(--clr-gold); font-weight: 500; }
@@ -208,28 +185,28 @@
 .ranking-card__img-wrap img { transition: transform 0.3s; }
 .ranking-card:hover .ranking-card__img-wrap img { transform: scale(1.04); }
 
-.ranking-card__badge { position: absolute; top: 10px; left: 10px; padding: 3px 8px; background: var(--clr-accent-orange); color: var(--clr-white); font-size: 10px; font-weight: 700; letter-spacing: 0.05em; }
 .ranking-card__brand { margin-bottom: 4px; font-size: 14px; font-weight: 700; }
 .ranking-card__price { color: var(--clr-muted); font-size: 13px; }
 .ranking-card__info { display: flex; flex-direction: column; gap: 4px; }
 .ranking-card__price-hint { color: var(--clr-accent-blue); font-size: 11px; font-weight: 500; }
-.ranking-card__preorder-meta { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
-.ranking-card__deadline { font-size: 11px; font-weight: 700; color: var(--clr-accent-orange); }
-.ranking-card__ship { font-size: 11px; color: var(--clr-light); }
 
-/* ==========================================================================
-   Brand Card
-   ========================================================================== */
+.preorder-card__img-wrap { position: relative; aspect-ratio: 5/6; margin-bottom: 12px; background: var(--clr-bg-light); overflow: hidden; }
+.preorder-card__img-wrap img { transition: transform 0.3s; }
+.preorder-card:hover .preorder-card__img-wrap img { transform: scale(1.04); }
+
+.preorder-card__badge { position: absolute; top: 10px; left: 10px; padding: 3px 8px; background: var(--clr-accent-orange); color: var(--clr-white); font-size: 10px; font-weight: 700; letter-spacing: 0.05em; }
+.preorder-card__brand { margin-bottom: 4px; font-size: 14px; font-weight: 700; }
+.preorder-card__price { color: var(--clr-muted); font-size: 13px; }
+.preorder-card__info { display: flex; flex-direction: column; gap: 4px; }
+.preorder-card__meta { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+.preorder-card__deadline { font-size: 11px; font-weight: 700; color: var(--clr-accent-orange); }
+.preorder-card__ship { font-size: 11px; color: var(--clr-light); }
 
 .brand-card { display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .brand-card__logo { width: 100%; aspect-ratio: 1; padding: 12px; display: flex; align-items: center; justify-content: center; background: var(--clr-bg-sub); font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-align: center; line-height: 1.4; transition: var(--transition); }
 .brand-card__logo img { width: 100%; height: 100%; object-fit: contain; }
 .brand-card:hover .brand-card__logo { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); }
 .brand-card__name { color: var(--clr-secondary); font-size: 11px; text-align: center; letter-spacing: 0.02em; }
-
-/* ==========================================================================
-   Cluster Lookbook Card
-   ========================================================================== */
 
 .cluster-lookbook-card { display: grid; grid-template-columns: 220px 1fr; gap: 0 52px; align-items: center; padding: 32px 0 24px; }
 .cluster-lookbook-card__left { display: flex; flex-direction: column; justify-content: space-between; gap: 32px; }
@@ -390,10 +367,6 @@
 .photoblog-long-entry__name { font-size: 13px; font-weight: 500; margin-bottom: 2px; }
 .photoblog-long-entry__date { color: var(--clr-light); font-size: 11px; }
 
-/* ==========================================================================
-   Onboarding Modal
-   ========================================================================== */
-
 .onboarding-modal { position: fixed; inset: 0; z-index: var(--z-modal); display: none; }
 .onboarding-modal--open { display: block; }
 .onboarding-modal__backdrop { position: absolute; inset: 0; background: var(--clr-overlay-dark); }
@@ -427,10 +400,6 @@
 .onboarding-modal__skip { margin-top: 4px; color: var(--clr-light); font-size: 12px; text-decoration: underline; cursor: pointer; }
 .onboarding-modal__skip:hover { color: var(--clr-muted); }
 
-/* ==========================================================================
-   Search Overlay
-   ========================================================================== */
-
 .search-overlay { position: fixed; inset: 0; z-index: var(--z-search); display: none; }
 .search-overlay--open { display: block; }
 .search-overlay__backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.45); }
@@ -453,10 +422,6 @@
 .search-overlay__close { color: var(--clr-muted); font-size: 18px; transition: var(--transition); }
 .search-overlay__close:hover { color: var(--clr-primary); }
 
-/* ==========================================================================
-   Scroll To Top
-   ========================================================================== */
-
 .scroll-top {
   position: fixed;
   bottom: 32px;
@@ -477,20 +442,12 @@
 .scroll-top--visible { opacity: 1; pointer-events: auto; }
 .scroll-top:hover { background: var(--clr-secondary); }
 
-/* ==========================================================================
-   Trending Keywords
-   ========================================================================== */
-
 .trending-keywords { padding: 90px 0; text-align: center; }
 .trending-keywords__title { margin-bottom: 24px; font-size: 18px; font-weight: 600; letter-spacing: 0.02em; }
 .trending-keywords__lists { display: contents; }
 .trending-keywords__list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
 .trending-keywords__tag { padding: 8px 18px; background: var(--clr-bg-light); color: var(--clr-secondary); font-size: 13px; cursor: pointer; transition: var(--transition); white-space: nowrap; }
 .trending-keywords__tag:hover { background: var(--clr-bg-light); color: var(--clr-primary); }
-
-/* ==========================================================================
-   Item Category Tabs & Items
-   ========================================================================== */
 
 .item-category__tabs { display: flex; justify-content: center; gap: 40px; margin-bottom: 32px; }
 .item-category__tab { padding-bottom: 12px; border-bottom: 2px solid transparent; color: var(--clr-muted); font-size: 14px; letter-spacing: 0.1em; transition: var(--transition); margin-bottom: -1px; }
@@ -500,11 +457,6 @@
 .category-grid__item { color: var(--clr-secondary); font-size: 13px; cursor: pointer; transition: var(--transition); }
 .category-grid__item:hover { color: var(--clr-primary); }
 
-
-/* ==========================================================================
-   Responsive: Tablet (≤1024px)
-   ========================================================================== */
-
 @media (max-width: 1024px) {
   .flash-strip { padding-inline: 40px; }
   .editorial-cluster { height: 420px; }
@@ -512,10 +464,6 @@
   .cluster-lookbook-card { grid-template-columns: 180px 1fr; gap: 0 32px; }
   .photoblog-long-entry, .photoblog-long-entry--reverse { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
-
-/* ==========================================================================
-   Responsive: Mobile (≤768px)
-   ========================================================================== */
 
 @media (max-width: 768px) {
   .flash-strip { padding-inline: 16px; font-size: 12px; }
@@ -533,10 +481,6 @@
   .editorial-cluster__side { grid-template-rows: none; grid-template-columns: 1fr 1fr; height: 180px; }
   .editorial-cluster__title { font-size: 20px; }
 }
-
-/* ==========================================================================
-   Category Dropdown
-   ========================================================================== */
 
 .cat-dropdown {
   display: none;
@@ -618,10 +562,6 @@
   .cat-dropdown__item { padding: 8px 10px; font-size: 12px; }
 }
 
-/* ==========================================================================
-   Intro Modal
-   ========================================================================== */
-
 .intro-modal {
   position: fixed;
   inset: 0;
@@ -692,6 +632,27 @@
   word-break: keep-all;
 }
 
+.intro-modal__notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  background: #FFF8F5;
+  border: 1px solid rgba(232, 69, 10, 0.2);
+  font-size: 12px;
+  color: var(--clr-muted);
+  margin-bottom: 36px;
+  word-break: keep-all;
+}
+
+.intro-modal__notice i {
+  color: var(--clr-accent-orange);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
 .intro-modal__cta {
   display: inline-block;
   background: var(--clr-primary);
@@ -711,4 +672,164 @@
   .intro-modal__box { padding: 40px 28px 36px; }
   .intro-modal__logo { font-size: 22px; }
   .intro-modal__title { font-size: 17px; }
+}
+
+.lookbook-snap-card--shoppable { cursor: pointer; }
+.lookbook-snap-card--shoppable:hover .lookbook-snap-card__shop-badge { opacity: 1; transform: translateY(0); }
+
+.lookbook-snap-card__shop-badge {
+  position: absolute;
+  bottom: 52px;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background: var(--clr-white);
+  color: var(--clr-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 7px 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.snap-look-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.snap-look-modal--open { display: flex; }
+
+.snap-look-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.snap-look-modal__box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44% 1fr;
+  width: min(780px, calc(100vw - 32px));
+  background: var(--clr-white);
+  overflow: hidden;
+  animation: introSlideUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.snap-look-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--clr-white);
+  font-size: 16px;
+  color: var(--clr-muted);
+  z-index: 1;
+  transition: var(--transition);
+}
+.snap-look-modal__close:hover { color: var(--clr-primary); }
+
+.snap-look-modal__snap {
+  position: relative;
+  min-height: 480px;
+  overflow: hidden;
+}
+.snap-look-modal__snap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.snap-look-modal__snap-meta {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  padding: 56px 20px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+  color: var(--clr-white);
+}
+.snap-look-modal__username { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.snap-look-modal__snap-tag { font-size: 12px; opacity: 0.75; }
+
+.snap-look-modal__panel {
+  padding: 44px 36px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+.snap-look-modal__eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--clr-accent-orange);
+  margin-bottom: 10px;
+}
+.snap-look-modal__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--clr-primary);
+}
+
+.snap-look-modal__list { display: flex; flex-direction: column; }
+
+.snap-look-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--clr-border-light);
+  color: var(--clr-primary);
+  transition: var(--transition);
+}
+.snap-look-item:last-child { border-bottom: none; }
+.snap-look-item:hover { opacity: 0.65; }
+
+.snap-look-item__img {
+  width: 80px;
+  height: 100px;
+  background: var(--clr-bg-light);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.snap-look-item__img img { width: 100%; height: 100%; object-fit: cover; }
+
+.snap-look-item__info { display: flex; flex-direction: column; justify-content: center; gap: 5px; }
+.snap-look-item__brand { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: var(--clr-muted); text-transform: uppercase; }
+.snap-look-item__name { font-size: 13px; color: var(--clr-primary); line-height: 1.45; }
+.snap-look-item__price { font-size: 15px; font-weight: 700; color: var(--clr-primary); }
+.snap-look-item__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--clr-accent-blue);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 600px) {
+  .snap-look-modal__box { grid-template-columns: 1fr; }
+  .snap-look-modal__snap { min-height: 260px; }
+  .snap-look-modal__panel { padding: 28px 24px 24px; }
 }

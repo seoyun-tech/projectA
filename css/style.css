@@ -1,7 +1,3 @@
-/* ==========================================================================
-   Variables
-   ========================================================================== */
-
 :root {
   --clr-primary: #1A1A1A;
   --clr-secondary: #333333;
@@ -35,10 +31,6 @@
   --z-top: 9999;
 }
 
-/* ==========================================================================
-   Reset & Base
-   ========================================================================== */
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { font-size: 14px; }
@@ -54,10 +46,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 ul { list-style: none; }
 a { text-decoration: none; color: inherit; cursor: pointer; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
-
-/* ==========================================================================
-   Navigation
-   ========================================================================== */
 
 .nav {
   position: relative;
@@ -102,10 +90,6 @@ header {
 .nav__hamburger--open span:nth-child(2) { opacity: 0; }
 .nav__hamburger--open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ==========================================================================
-   Main Content Layout
-   ========================================================================== */
-
 .main-content {
   display: flex;
   flex-direction: column;
@@ -115,7 +99,6 @@ header {
 
 .section-block { padding-inline: var(--page-x); }
 
-/* 센터 정렬 기본값. 인라인 레이아웃이 필요할 때만 --inline 수식어 사용 */
 .section-block__header {
   display: flex;
   flex-direction: column;
@@ -142,10 +125,6 @@ header {
 
 .section-block--gray { margin: 0 calc(-1 * var(--page-x)); padding: 90px calc(var(--page-x) * 2); background: var(--clr-bg-light); }
 .section-block--cream { margin: 0 calc(-1 * var(--page-x)); padding: 90px calc(var(--page-x) * 2); background: var(--clr-bg-cream); }
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
 
 .footer { padding: 64px var(--page-x) 40px; background: var(--clr-primary); }
 .footer__inner {
@@ -188,20 +167,12 @@ header {
 .footer__legal a:hover { color: var(--clr-white); }
 .footer__copy { font-size: 11px; color: rgba(255, 255, 255, 0.2); }
 
-/* ==========================================================================
-   Responsive: Tablet (≤1024px)
-   ========================================================================== */
-
 @media (max-width: 1024px) {
   :root { --page-x: 40px; }
   .nav__menu { gap: 20px; }
   .main-content { padding: 32px 0 60px; }
   .section-block__title { font-size: 30px; }
 }
-
-/* ==========================================================================
-   Responsive: Mobile (≤768px)
-   ========================================================================== */
 
 @media (max-width: 768px) {
   :root { --page-x: 16px; }
