@@ -675,27 +675,6 @@
 }
 
 .lookbook-snap-card--shoppable { cursor: pointer; }
-.lookbook-snap-card--shoppable:hover .lookbook-snap-card__shop-badge { opacity: 1; transform: translateY(0); }
-
-.lookbook-snap-card__shop-badge {
-  position: absolute;
-  bottom: 52px;
-  left: 50%;
-  transform: translateX(-50%) translateY(6px);
-  background: var(--clr-white);
-  color: var(--clr-primary);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  padding: 7px 14px;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  pointer-events: none;
-}
 
 .snap-look-modal {
   position: fixed;

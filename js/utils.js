@@ -91,7 +91,6 @@ const snapCardHTML = (snap, idx) => {
           <i class="fa-regular fa-bookmark"></i>
         </button>
       </div>
-      ${isShoppable ? '<div class="lookbook-snap-card__shop-badge"><i class="fa-solid fa-bag-shopping"></i> SHOP THE LOOK</div>' : ''}
     </div>`;
 };
 
