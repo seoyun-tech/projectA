@@ -57,14 +57,14 @@ const CLUSTER_LATEST_PRODUCTS = {
 
 const CLUSTER_BRAND_STORIES = {
   running: [
-    { img: 'brand-story-1.jpg', title: 'TYPESERVICE × 러닝코어 — 스포티와 스트릿의 경계',              date: '2026.04.10', url: 'brand-story.html' },
-    { img: 'brand-story-2.jpg', title: 'NOHANT의 시그니처 후드 재킷, 이번 시즌 베스트셀러를 만나다',  date: '2026.04.09' },
-    { img: 'brand-story-3.jpg', title: 'F/W 한강런 필수 아이템 — 스포티 캐주얼 완성 가이드',          date: '2026.04.07' },
-    { img: 'brand-story-4.jpg', title: 'YESEYESEE — 달리는 서울의 새 시즌, 러닝코어 필수 아이템',     date: '2026.04.05' },
-    { img: 'brand-story-5.jpg', title: '고프코어 입문 가이드 — 기능성과 스타일을 동시에',             date: '2026.04.03' },
-    { img: 'brand-story-6.jpg', title: '도심 속 러닝을 위한 완벽한 기어, 이번 시즌 필수 리스트',      date: '2026.04.01' },
-    { img: 'brand-story-7.jpg', title: 'Night Run: 밤을 밝히는 리플렉티브 스타일링',                  date: '2026.03.30' },
-    { img: 'brand-story-8.jpg', title: '트레일 러닝 vs 시티 러닝, 당신의 선택은?',                    date: '2026.03.28' },
+    { img: 'brand-story-1.jpg', title: 'TYPESERVICE × 러닝코어 — 스포티와 스트릿의 경계',              date: '2025.12.03', url: 'brand-story.html' },
+    { img: 'brand-story-2.jpg', title: 'NOHANT의 시그니처 후드 재킷, 이번 시즌 베스트셀러를 만나다',  date: '2025.12.02' },
+    { img: 'brand-story-3.jpg', title: 'F/W 한강런 필수 아이템 — 스포티 캐주얼 완성 가이드',          date: '2025.12.01' },
+    { img: 'brand-story-4.jpg', title: 'YESEYESEE — 달리는 서울의 새 시즌, 러닝코어 필수 아이템',     date: '2025.12.03' },
+    { img: 'brand-story-5.jpg', title: '고프코어 입문 가이드 — 기능성과 스타일을 동시에',             date: '2025.12.02' },
+    { img: 'brand-story-6.jpg', title: '도심 속 러닝을 위한 완벽한 기어, 이번 시즌 필수 리스트',      date: '2025.12.01' },
+    { img: 'brand-story-7.jpg', title: 'Night Run: 밤을 밝히는 리플렉티브 스타일링',                  date: '2025.12.03' },
+    { img: 'brand-story-8.jpg', title: '트레일 러닝 vs 시티 러닝, 당신의 선택은?',                    date: '2025.12.02' },
   ],
 };
 
